@@ -1,0 +1,57 @@
+---
+const { title, subtitle,subtitle2, description } = Astro.props;
+---
+
+<div class="Init">
+  <span class="title">{title}</span>
+  <h3>¿{subtitle} <span>{subtitle2}</span>?</h3>
+  <p>
+    {description}
+  </p>
+</div>
+
+<style>
+  .Init {
+    text-align: center;
+    padding: 13px;
+  }
+
+  .Init .title {
+    display: block;
+    font-size: var(--text-small-section);
+    margin-top: 20px;
+    font-weight: 300;
+    color: hsl(var(--primary-color-section));
+    letter-spacing: 0.3em;
+     text-align: center;
+ }
+ 
+
+  .Init h3 {
+    font-size: clamp(1.9rem, 4vw, 5rem);
+    margin-top: 10px;
+    font-family: var(--font-Principal);
+    font-weight: 300;
+    line-height: 1.25;
+    margin: 10px auto;
+    max-width: 58rem;
+  }
+
+  .Init h3 span {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+  }
+  .Init p {
+    font-size: var(--text-small);
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+    color: hsl(var(--color-text));
+    line-height: 1.5rem;
+  }
+</style>
