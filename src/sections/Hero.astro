@@ -1,0 +1,93 @@
+---
+import Welcome from "../components/Menu.astro";
+---
+
+<div class="hero">
+  <Welcome />
+  <img src="/Corona.avif" alt="Hero Image" />
+  <b>Certamen de Belleza · Sabinas, Coahuila</b>
+  <h2>Belleza, Elegancia y Orgullo que Representan a <span>Sabinas</span></h2>
+  <p>
+    La próxima reina de Sabinas está lista para brillar. Descubre a las
+    candidatas, vota por tu favorita y sé parte de esta tradición de glamour.
+  </p>
+
+  <button>Conocer Requisitos</button>
+</div>
+
+<style>
+  .hero {
+    background-image:
+      linear-gradient(hsla(0, 0%, 0%, 0.508), hsla(0, 0%, 0%, 0.149)),
+      url("/hero.avif");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    text-align: center;
+    padding: 10px;
+  }
+
+  img {
+    width: 100px;
+    margin: 0px;
+  }
+
+  .hero b {
+    display: block;
+    font-size: var(--text-small);
+    margin-top: 20px;
+    font-weight: 300;
+    color: hsl(var(--champagne));
+    letter-spacing: 0.3em;
+  }
+
+  h2 {
+    font-size: clamp(2.25rem, 4.9vw, 5rem);
+    margin-top: 10px;
+    font-family: var(--font-Principal);
+    font-weight: 300;
+    color: white;
+    line-height: 1.25;
+
+    margin: 10px auto;
+    max-width: 40rem;
+  }
+
+  h2 span {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  p {
+    font-size: var(--text-small);
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+    color: hsl(var(--champagne));
+    line-height: 1.5rem;
+  }
+
+  button {
+    margin-top: 20px;
+    background: var(--gold-gradient);
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: var(--text-small);
+    font-weight: 400;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  @media (max-width: 768px) {
+     .hero b {
+    
+    font-size: .9rem;
+   
+  }
+  }
+</style>

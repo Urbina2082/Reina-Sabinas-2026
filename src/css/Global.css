@@ -1,0 +1,16 @@
+:root {
+  --gold-gradient:  linear-gradient(
+  135deg,
+  #f1d6b4 0%,
+  #D1A06A 25%,
+  #BC7F43 55%,
+  #9A632D 80%,
+  #74471E 100%
+);
+  --font-Principal: Cinzel, serif;
+  --primary-color: #ffffff;
+
+  --champagne: 30, 40%, 88%;
+
+  --text-small:1rem;
+}
