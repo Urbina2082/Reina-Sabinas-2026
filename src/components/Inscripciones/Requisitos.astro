@@ -3,7 +3,26 @@
 ---
 
 <div class="requisitos">
-  <h3>REQUISITOS</h3>
+  <div class="uniq">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="text-primary"
+      ><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"
+      ></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"
+      ></path><path d="M16 13H8"></path><path d="M16 17H8"></path>
+    </svg>
+
+    <h3>REQUISITOS</h3>
+  </div>
+
   <ul>
     <li>Ser residente y originaria de la ciudad de Sabinas, Coahuila.</li>
     <li>La participación va dirigida únicamente a mujeres.</li>
@@ -35,13 +54,12 @@
     </li>
     <li>Registro limitado a un máximo de 8 participantes.</li>
   </ul>
- <span> INSCRIPCIONES ABIERTAS DEL 1 AL 24 DE JULIO DE 2026.</span>
+  <span> INSCRIPCIONES ABIERTAS DEL 1 AL 24 DE JULIO DE 2026.</span>
 </div>
 
 <style>
   .requisitos {
-   
-    padding:20px 38px ;
+    padding: 20px 38px;
     background-color: #ffffff;
     max-width: 500px;
     margin: 0 auto;
@@ -66,7 +84,7 @@
     margin-left: auto;
     margin-right: auto;
     font-weight: 400;
-    color: hsl(var(--color-text));
+    color: var(--color-text);
     line-height: 1.5rem;
     text-align: left;
     padding: 0px;
@@ -81,15 +99,25 @@
 
   ul li::marker {
     color: hsl(var(--primary-color-section));
-   
   }
 
-    .requisitos span {
-        display: block;
-        margin-top: 20px;
-        font-size: var(--text-small-section);
-        font-weight: 400;
-        color: hsl(var(--color-text));
-        line-height: 1.5rem;
-    }
+  .requisitos span {
+    display: block;
+    margin-top: 20px;
+    font-size: var(--text-small-section);
+    font-weight: 400;
+    color: var(--color-text);
+    line-height: 1.5rem;
+  }
+
+  .text-primary {
+    color: hsl(var(--primary-color-section));
+  }
+
+  .uniq {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+  }
 </style>
