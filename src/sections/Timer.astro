@@ -1,0 +1,240 @@
+---
+import InitSection from "../components/InitSection.astro";
+---
+
+<div class="timer-container">
+  <!-- Partículas flotantes de fondo -->
+  <div class="particles-bg">
+    <div class="particle" style="left: 11.2867%; top: 26.6918%; animation-delay: 2.91375s; animation-duration: 5.03289s;"></div>
+    <div class="particle" style="left: 24.2974%; top: 27.2206%; animation-delay: 5.85219s; animation-duration: 5.74083s;"></div>
+    <div class="particle" style="left: 35.9933%; top: 66.377%; animation-delay: 2.13501s; animation-duration: 5.90627s;"></div>
+    <div class="particle" style="left: 43.2883%; top: 76.6078%; animation-delay: 5.84452s; animation-duration: 4.90776s;"></div>
+    <div class="particle" style="left: 57.8484%; top: 67.9782%; animation-delay: 0.511598s; animation-duration: 4.257s;"></div>
+    <div class="particle" style="left: 60.9927%; top: 56.5163%; animation-delay: 1.70868s; animation-duration: 7.76228s;"></div>
+    <div class="particle" style="left: 23.9056%; top: 31.4284%; animation-delay: 1.10899s; animation-duration: 4.37359s;"></div>
+    <div class="particle" style="left: 84.7226%; top: 70.6025%; animation-delay: 3.59392s; animation-duration: 7.31834s;"></div>
+    <div class="particle" style="left: 88.0067%; top: 68.2986%; animation-delay: 0.101713s; animation-duration: 5.2374s;"></div>
+    <div class="particle" style="left: 63.2395%; top: 64.8657%; animation-delay: 2.22819s; animation-duration: 5.42227s;"></div>
+    <div class="particle" style="left: 45.5566%; top: 39.986%; animation-delay: 5.4408s; animation-duration: 4.74554s;"></div>
+    <div class="particle" style="left: 22.4357%; top: 63.1244%; animation-delay: 3.91015s; animation-duration: 6.73518s;"></div>
+    <div class="particle" style="left: 59.2423%; top: 95.8746%; animation-delay: 1.29637s; animation-duration: 4.81327s;"></div>
+    <div class="particle" style="left: 48.9927%; top: 9.55974%; animation-delay: 4.35899s; animation-duration: 7.44914s;"></div>
+    <div class="particle" style="left: 16.5119%; top: 72.7902%; animation-delay: 1.81425s; animation-duration: 7.41847s;"></div>
+    <div class="particle" style="left: 25.8453%; top: 58.3629%; animation-delay: 4.60362s; animation-duration: 5.40596s;"></div>
+    <div class="particle" style="left: 12.322%; top: 9.30208%; animation-delay: 4.89635s; animation-duration: 4.29818s;"></div>
+    <div class="particle" style="left: 92.2942%; top: 96.5462%; animation-delay: 0.653318s; animation-duration: 6.29833s;"></div>
+    <div class="particle" style="left: 84.373%; top: 24.0264%; animation-delay: 2.20365s; animation-duration: 4.37427s;"></div>
+    <div class="particle" style="left: 9.01319%; top: 36.9044%; animation-delay: 2.66556s; animation-duration: 5.56859s;"></div>
+  </div>
+
+  <div class="timer">
+<img data-aos="fade-down" src="/Corona.avif" alt="">
+
+    <InitSection
+      title="REINA SABINAS 2026"
+      subtitle=""
+      subtitle2="PROXIMAMENTE"
+      description="La ganadora será anunciada en la Gran Noche de Coronación el 11 de septiembre de 2026. ¡No te lo pierdas!"
+    />
+
+    <div class="countdown">
+      <div class="sec">
+        <div class="time"><h5 data-aos="fade-right">00</h5></div>
+        <p data-aos="fade-right">DIAS</p>
+      </div>
+      <span class="separator">:</span>
+      <div class="sec">
+        <div class="time"><h5 data-aos="fade-right">00</h5></div>
+        <p data-aos="fade-right">HORAS</p>
+      </div>
+      <span class="separator">:</span>
+      <div class="sec">
+        <div class="time"><h5 data-aos="fade-right">00</h5></div>
+        <p data-aos="fade-right">MIN</p>
+      </div>
+      <span class="separator">:</span>
+      <div class="sec">
+        <div class="time"><h5 data-aos="fade-right">00</h5></div>
+        <p data-aos="fade-right">SEG</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+
+.timer-container{
+    position:relative;
+    width:100%;
+    overflow:hidden;
+}
+
+
+
+.particles-bg{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:1;
+}
+
+.particle{
+    position:absolute;
+
+    width:4px;
+    height:4px;
+
+    border-radius:50%;
+
+    background:rgba(243,229,171,.65);
+
+    box-shadow:
+        0 0 6px rgba(243,229,171,.8),
+        0 0 12px rgba(243,229,171,.4);
+
+    opacity:0;
+
+    animation-name:floatParticle;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+
+    will-change:transform,opacity;
+    transform:translate3d(0,0,0);
+}
+
+
+
+.particle:nth-child(3n){
+    width:2px;
+    height:2px;
+}
+
+.particle:nth-child(4n){
+    width:3px;
+    height:3px;
+}
+
+.particle:nth-child(5n){
+    width:6px;
+    height:6px;
+    filter:blur(.4px);
+}
+
+
+
+@keyframes floatParticle{
+
+    0%{
+        transform:
+            translate3d(0,40px,0)
+            scale(.3);
+
+        opacity:0;
+    }
+
+    15%{
+        opacity:.6;
+    }
+
+    30%{
+        transform:
+            translate3d(-8px,0,0)
+            scale(.9);
+    }
+
+    55%{
+        transform:
+            translate3d(10px,-30px,0)
+            scale(1.1);
+
+        opacity:1;
+    }
+
+    75%{
+        transform:
+            translate3d(-6px,-65px,0)
+            scale(.8);
+    }
+
+    100%{
+        transform:
+            translate3d(8px,-110px,0)
+            scale(.2);
+
+        opacity:0;
+    }
+
+}
+
+img{
+    width: 120px;
+    display: block;
+    margin: auto;
+}
+
+.timer{
+    position:relative;
+    z-index:10;
+
+    margin:1rem 0rem 8rem;
+}
+
+
+.countdown{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:15px;
+
+    color:white;
+}
+
+.separator{
+    font-size:1.5rem;
+
+    color:rgba(255,255,255,.45);
+
+    margin-bottom:1.4rem;
+
+    font-family:var(--font-Principal);
+}
+
+.sec{
+    text-align:center;
+}
+
+.sec h5{
+
+    margin:1rem 0;
+
+    font-size:1.9rem;
+
+    font-weight:300;
+
+    letter-spacing:.30em;
+
+    font-family:var(--font-Principal);
+
+    background:var(--gold-gradient);
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+.sec p{
+
+    margin:0;
+
+    color:rgba(255,255,255,.75);
+
+    font-size:.8rem;
+
+    letter-spacing:.15em;
+
+}
+</style>

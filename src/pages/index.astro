@@ -1,18 +1,20 @@
 ---
+import Layout from "../layouts/Layout.astro";
 
-import Layout from '../layouts/Layout.astro';
+import Hero from "../sections/Hero.astro";
+import Incripciones from "../sections/Incripciones.astro";
+import Footer from "../sections/Footer.astro";
+import Historia from "../sections/Historia.astro";
 
-import Hero from '../sections/Hero.astro';
-import Incripciones from '../sections/Incripciones.astro';
-import Footer from '../sections/Footer.astro';
-import Historia from '../sections/Historia.astro';
-import Video from '../sections/Video.astro';
+import Video from "../sections/Video.astro";
+import Counter from "../sections/Timer.astro"
 ---
 
 <Layout>
-	<Hero loading="lazy" />
-	<Incripciones loading="lazy"/>
-	<Video loading="lazy" />
-	<Historia loading="lazy" />
-	<Footer loading="lazy" />
+  <Hero loading="lazy" />
+  <Incripciones loading="lazy" />
+  <Video loading="lazy" />
+  <Historia loading="lazy" />
+   <Counter loading="lazy" />
+  <Footer loading="lazy" />
 </Layout>
