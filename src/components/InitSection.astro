@@ -2,10 +2,10 @@
 const { title, subtitle,subtitle2, description } = Astro.props;
 ---
 
-<div class="Init">
-  <span class="title">{title}</span>
-  <h3>¿{subtitle} <span>{subtitle2}</span>?</h3>
-  <p>
+<div class="Init" >
+  <span data-aos="fade-down" class="title">{title}</span>
+  <h3 data-aos="fade-down">{subtitle} <span>{subtitle2}</span></h3>
+  <p data-aos="fade-down">
     {description}
   </p>
 </div>

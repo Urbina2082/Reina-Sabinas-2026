@@ -2,13 +2,13 @@
 const { icon, title, description } = Astro.props;
 ---
 
-<div class="card">
-  <div class="icon">
+<div data-aos="fade-down"  class="card">
+  <div data-aos="fade-down"  class="icon">
    <Fragment set:html={icon} />
   </div>
 
-  <h4>{title}</h4>
-  <p>{description}</p>
+  <h4 data-aos="fade-down" >{title}</h4>
+  <p data-aos="fade-down" >{description}</p>
 </div>
 
 <style>

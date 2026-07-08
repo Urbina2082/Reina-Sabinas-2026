@@ -1,44 +1,70 @@
 ---
 import "../css/Global.css";
+import "aos/dist/aos.css";
 ---
 
-<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KMVGC4JW5Y"
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-KMVGC4JW5Y"
     ></script>
-    <script>
+
+    <script is:inline>
       window.dataLayer = window.dataLayer || [];
+
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag("js", new Date());
 
+      gtag("js", new Date());
       gtag("config", "G-KMVGC4JW5Y");
     </script>
+
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/logo-white.avif" />
     <meta name="generator" content={Astro.generator} />
+
+    <link rel="icon" href="/logo-white.avif" />
+
     <title>Reina Sabinas 2026</title>
   </head>
+
   <body>
     <slot />
+
+    <script type="module">
+      window.addEventListener("DOMContentLoaded", async () => {
+        const AOS = (await import("aos")).default;
+
+        AOS.init({
+          duration: 1000,
+          once: true,
+          offset: 100,
+        });
+      });
+    </script>
   </body>
 </html>
 
 <style>
   html,
   body {
-    background: #071311 ;
+    background: #071311;
     margin: 0;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     font-family: system-ui, sans-serif;
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
+</style>
 
-  
+<style is:global>
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.8s;
+  }
 </style>

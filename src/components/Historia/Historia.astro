@@ -1,0 +1,42 @@
+---
+const { icon, number, title } = Astro.props;
+---
+
+<div class="card">
+    <div data-aos="fade-down" class="icon">
+        <Fragment set:html={icon} />
+    </div>
+    <div data-aos="fade-down" class="num">{number}</div>
+    <h4 data-aos="fade-down">{title}</h4>
+</div>
+
+<style>
+  .card {
+    text-align: center;
+    color: white;
+  }
+
+  .icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .num {
+    font-size: 3rem;
+    font-family: var(--font-Principal);
+    font-weight: 300;
+    background: var(--gold-gradient-green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  h4 {
+    color: var(--text-muted);
+    font-weight: 400;
+    font-size: var(--text-small);
+    margin-top: 0;
+  }
+</style>
