@@ -1,8 +1,17 @@
 ---
+import InitSection from "../components/InitSection.astro";
 
 ---
 
+
 <div class="video-contenedor" data-aos="fade-right" >
+    <InitSection
+          title=""
+                subtitle="CONOCE A NUESTRA"
+                      subtitle2="REINA ACTUAL"
+                            description=""
+                                />
+
   <div class="video">
     <video width="310px" height="auto" controls>
         <source src="/promo.mov" type="video/mp4">
@@ -15,6 +24,7 @@
  .video-contenedor {
     max-width: 800px;
     display: flex;
+flex-direction: column;
     justify-content: center;
     align-items: center; 
     margin: 150px auto;
