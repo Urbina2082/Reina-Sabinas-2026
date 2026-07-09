@@ -1,0 +1,191 @@
+---
+import InitSection from "../components/InitSection.astro";
+import { Image } from "astro:assets";
+import AnaFalcon from "../assets/AnaFalcon.jpeg"; 
+---
+
+<div class="reina">
+  <!-- <InitSection
+    title="NUESTRA REINA"
+    subtitle="CONOCE A TU"
+    subtitle2="REINA"
+    description="Elegancia, carisma y corazón — el rostro que representa a Sabinas con orgullo"
+  /> -->
+
+  <div class="info">
+    <div class="imag">
+      <Image class="hero-img" src={AnaFalcon} alt="Hero" />
+    </div>
+    <div class="tex">
+      <span>PRESENTADO A</span>
+      <h3>ANA FALCON</h3>
+      <p>17 años · Sabinas, Coahuila</p>
+      <div class="description">
+        <p>
+          "No importa qué tan grande sea la muralla,siempre puedes escalarla"
+        </p>
+      </div>
+
+      <!-- <div class="conjunt">
+        <div class="block">
+          <h4>EDAD</h4>
+          <p>21 años</p>
+        </div>
+        <div class="block">
+          <h4>CIUDAD</h4>
+          <p>Sabinas, Coahuila</p>
+        </div>
+        <div class="block">
+          <h4>VALORES</h4>
+          <p>Empatía · Disciplina · Responsabilidad</p>
+        </div>
+        <div class="block">
+          <h4>OBJETIVO</h4>
+          <p>Inspirar y representar con orgullo a Sabinas</p>
+        </div>
+      </div> -->
+
+      <a href="https://www.instagram.com/anaffalcon/"><button>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-instagram"
+          ><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path
+            d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line
+            x1="17.5"
+            x2="17.51"
+            y1="6.5"
+            y2="6.5"></line></svg
+        >SEGUIR
+      </button></a>
+      
+    </div>
+  </div>
+</div>
+
+<style>
+  .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column-reverse; */
+    gap: 5rem;
+
+    flex-wrap: wrap;
+    padding: 0rem 15px;
+    margin: 3rem 0rem;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+
+    border-radius: 25px;
+    border: 1px solid var(--gold);
+    box-shadow: 2px 2px 40px 3px #49654d;
+  }
+
+  .tex {
+    max-width: 600px;
+  }
+
+  .tex span {
+    color: #49654d;
+    font-size: 0.9rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .tex h3 {
+    background: var(--gold-gradient);
+    font-family: var(--font-Principal);
+    font-size: clamp(2.6rem, 3.5vw, 4rem);
+    font-weight: 300;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 20px 0px;
+  }
+
+  .tex p {
+    color: var(--text-muted);
+  }
+
+  .description p {
+    color: #ffffff8d;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .conjunt {
+    margin: 30px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .block {
+    padding: 20px;
+    border: solid 1px #49654d;
+    display: block;
+    border-radius: 15px;
+    background: #49654d0e;
+    width: 250px;
+    max-width: 350px;
+  }
+
+  .block h4 {
+    margin: 0px 0px 10px;
+    color: var(--gold);
+    font-weight: 500;
+  }
+  .block p {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.618);
+    margin: 0px;
+  }
+
+  button {
+    border: 1px solid var(--gold);
+    color: white;
+    padding: 14px 30px;
+    border-radius: 25px;
+    background: #49654d00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  a{
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .hero-img {
+      object-fit: contain;
+      height: auto;
+    }
+
+      .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+.info {
+   
+    flex-direction: column-reverse;
+   
+  }
+
+  }
+</style>
