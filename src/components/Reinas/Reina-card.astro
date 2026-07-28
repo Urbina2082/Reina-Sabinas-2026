@@ -38,11 +38,15 @@ const {img,nombre,edad,frase,insta} = Astro.props;
 
 <style>
   .card {
+    width: 100%;
+ 
     max-width: 350px;
     border-radius: 25px;
     border: 1px solid var(--gold);
     box-shadow: 2px 2px 40px 3px #49654d7c;
     overflow: hidden;
+  display: flex;
+   flex-direction:column;
   }
 
   .hero {
@@ -63,6 +67,8 @@ const {img,nombre,edad,frase,insta} = Astro.props;
     padding: 1rem;
     color: rgba(255, 255, 255, 0.834);
     background: #0c1f1b;
+    flex: 1;
+    flex-direction: column;
   }
 
   h3 {
