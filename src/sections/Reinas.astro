@@ -1,0 +1,99 @@
+---
+import ReinaCard from "../components/Reinas/Reina-card.astro";
+import InitSection from "../components/InitSection.astro";
+
+const Candidatas = [
+  {
+    id: "Larisa Veronica Guevara Ramos",
+    nombre: "LARISA GUEVARA",
+    edad: "24 años",
+    instagram: "Larisa_guevara12",
+    frase: ` “Representar con el corazón vale más que destacar por la perfección”`,
+    img: "/C1.avif",
+  },
+  {
+    id: "María Lucía Ramos Montemayor",
+    nombre: "MARIA RAMOS",
+    edad: "16 años",
+    instagram: "mariluramos_",
+    frase: ` "La belleza real se mide por la empatía que despierta"`,
+    img: "/C2.avif",
+  },
+  {
+    id: "María Fernanda Rodríguez Guerra",
+    nombre: "MARIA RODRIGUEZ",
+    edad: "16 años",
+    instagram: "ferr__rdz",
+    frase: ` ”Vive de una manera que siempre quieras volver a vivir” `,
+    img: "/C3.avif",
+  },
+  {
+    id: "Anahí Alejandra Ruiz Wislar ",
+    nombre: "ANAHI RUIZ",
+    edad: "20 años",
+    instagram: "ana30_rw",
+    frase: ` "Con la vocación de enseñar, el corazón para servir y el brillo para inspirar" `,
+    img: "/C4.avif",
+  },
+  {
+    id: "Virginia Kamyla Vazquez Granados",
+    nombre: "VIRGINIA VAZQUEZ",
+    edad: "20 años",
+    instagram: "Granados.kv",
+    frase: ` “Los sueños se cumplen cuando te atreves a dar el primer paso” `,
+    img: "/C5.avif",
+  }
+
+];
+---
+
+<div class="Reinas" id="Candidatas">
+
+    <InitSection
+     title="CANDIDATAS 2026"
+    subtitle="CONOCE A NUESTRAS"
+    subtitle2="CANDIDATAS"
+    description="Descubre a las talentosas mujeres que compiten por la corona este año y conoce más sobre su belleza, carisma y preparación en esta emocionante competencia."/>
+
+   <div class="tarjetas" >
+
+  
+  {
+    Candidatas.map((candi) => (
+     
+        <ReinaCard class="tar" 
+          nombre={candi.nombre}
+          edad={candi.edad}
+          frase={candi.frase}
+          insta={candi.instagram}
+          img={candi.img}
+        />
+      
+    ))
+  } </div>
+</div>
+
+<style>
+  .Reinas {
+    padding: 6rem 0rem;
+
+    background-image: linear-gradient(
+      to top,
+      #ffffff01 0%,FFFF
+      #ffffff09 50%,
+      #ffffff01 100%
+    );
+    margin: auto;
+  }
+
+  .tarjetas {
+    display: flex;
+gap: 5rem;
+    flex-wrap: wrap;
+    margin: 3rem auto;
+    justify-content: center;
+    padding: 0rem 1rem;
+  }
+
+  .tar
+</style>

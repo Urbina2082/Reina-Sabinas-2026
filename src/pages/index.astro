@@ -5,19 +5,22 @@ import Hero from "../sections/Hero.astro";
 import Incripciones from "../sections/Incripciones.astro";
 import Footer from "../sections/Footer.astro";
 import Historia from "../sections/Historia.astro";
-
+import Reinas from "../sections/Reinas.astro";
 import Video from "../sections/Video.astro";
-import Counter from "../sections/Timer.astro"
+import Counter from "../sections/Timer.astro";
 import NuestraRE from "../sections/NuestraRE.astro";
+import Votaciones from "../sections/Votaciones.astro";
 ---
 
 <Layout>
-  <Hero loading="lazy" />
-  <Incripciones loading="lazy" />
-  <Video loading="lazy" />
-  <NuestraRE/>
+  <Hero loading="lazy" /> 
   <Historia loading="lazy" />
-
-   <Counter loading="lazy" />
+  <!-- <Incripciones loading="lazy" /> -->
+  <Video loading="lazy" />
+  <NuestraRE />
+ 
+  <Reinas client:load />
+  <Votaciones loading="lazy" />
+  <Counter loading="lazy" />
   <Footer loading="lazy" />
 </Layout>

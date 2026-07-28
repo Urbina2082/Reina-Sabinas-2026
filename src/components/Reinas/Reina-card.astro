@@ -1,0 +1,99 @@
+---
+const {img,nombre,edad,frase,insta} = Astro.props;
+---
+
+<div class="card" data-aos="fade-down">
+  <div class="foto">
+    <img class="hero" src={img} alt="">
+  </div>
+
+  <div class="info">
+    <h3 >{nombre}</h3>
+    <span >{edad}</span>
+    <p >{frase}</p>
+    <a  href=`https://www.instagram.com/${insta}`
+      ><button >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-instagram"
+          ><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path
+            d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line
+            x1="17.5"
+            x2="17.51"
+            y1="6.5"
+            y2="6.5"></line></svg
+        >SEGUIR
+      </button></a
+    >
+  </div>
+</div>
+
+<style>
+  .card {
+    max-width: 350px;
+    border-radius: 25px;
+    border: 1px solid var(--gold);
+    box-shadow: 2px 2px 40px 3px #49654d7c;
+    overflow: hidden;
+  }
+
+  .hero {
+    width: 100%;
+    height: 400px;
+    object-fit:cover;
+    object-position: top;
+    display: block;
+  }
+
+
+  .foto {
+    width: 100%;
+  line-height: 0;
+  }
+
+  .info {
+    padding: 1rem;
+    color: rgba(255, 255, 255, 0.834);
+    background: #0c1f1b;
+  }
+
+  h3 {
+    font-family: var(--font-Principal);
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.867);
+    margin: 8px 0px;
+    letter-spacing: 2px;
+  }
+
+  span {
+    color: var(--gold);
+    font-size: 0.9rem;
+  }
+  p {
+    color: #ffffff88;
+    font-style: italic;
+    line-height: 1.5rem;
+  }
+  button {
+    border: 1px solid var(--gold);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    background: #49654d00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  a {
+    text-decoration: none;
+  }
+</style>
