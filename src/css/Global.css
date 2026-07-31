@@ -8,6 +8,20 @@
     #74471e 100%
   );
 
+  --gradient:radial-gradient(
+      circle at 20% 20%,
+      #bc7f433c,
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 78% 80%,
+      #bc7f4329,
+      transparent 30%
+    ),
+    linear-gradient(180deg, #071311 0%, #071311 100%);
+
+   ;
+
   --text-muted: #89a98d;
   --background: 165 44% 5%;
   --gold: #49654d;

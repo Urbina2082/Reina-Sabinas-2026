@@ -1,6 +1,6 @@
 ---
 import "../css/Global.css";
-import "aos/dist/aos.css";
+
 ---
 
 <html lang="en">
@@ -8,8 +8,7 @@ import "aos/dist/aos.css";
     <meta charset="utf-8" />
     <meta
       property="og:image"
-      content="https://reinasabinas.netlify.app/logo-Dark.jpg"
-    />
+      content="https://reinasabinas.netlify.app/logo-Dark.jpg"/>
 
     <meta
       name="description"
@@ -33,7 +32,7 @@ import "aos/dist/aos.css";
       gtag("config", "G-KMVGC4JW5Y");
     </script>
 
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
 
     <link rel="icon" href="/logo-white.avif" />
@@ -43,37 +42,12 @@ import "aos/dist/aos.css";
 
   <body>
     <slot />
-
-    <script type="module">
-      window.addEventListener("DOMContentLoaded", async () => {
-        const AOS = (await import("aos")).default;
-
-        AOS.init({
-          duration: 600,
-          once: true,
-          offset: 100,
-        });
-      });
-    </script>
   </body>
 </html>
 
 <style>
   html,
   body {
-    background: #071311;
-    margin: 0;
-    width: 100%;
-    min-height: 100vh;
-    font-family: system-ui, sans-serif;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-  }
-</style>
-
-<style is:global>
-  ::view-transition-old(root),
-  ::view-transition-new(root) {
-    animation-duration: 0.8s;
+   
   }
 </style>

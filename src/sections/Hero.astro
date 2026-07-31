@@ -4,35 +4,42 @@ import Welcome from "../components/Menu.astro";
 
 <div class="hero">
   <Welcome />
-  <img data-aos="fade-down" src="/logo.avif" alt="Hero Image" />
-  <b data-aos="fade-down">Certamen de Belleza · Sabinas, Coahuila</b>
+  <!-- <img data-aos="fade-down" src="/logo.avif" alt="Hero Image" /> -->
+  <!-- <b data-aos="fade-down">Certamen de Belleza · Sabinas, Coahuila</b>
   <h2 data-aos="fade-down">BELLEZA, ELEGANCIA Y ORGULLO QUE REPRESENTAN A <span>SABINAS</span></h2>
   <p data-aos="fade-down">
     La próxima reina de Sabinas está lista para brillar. Descubre a las
     candidatas, vota por tu favorita y sé parte de esta tradición de glamour.
-  </p>
+  </p> -->
+  <div class="conj">
+    <b>Certamen de Belleza · Sabinas, Coahuila</b>
+    <h2>
+      BELLEZA, ELEGANCIA Y ORGULLO QUE REPRESENTAN A <span>SABINAS</span>
+    </h2>
+  </div>
 
-  <a href="#Candidatas">
-    <button data-aos="fade-down"> CONOCER CANDIDATAS </button>
-  </a>
+  <!--  <a href="#Candidatas">
+    <button data-aos="fade-down"> CONOCER CANDIDATAS </button> 
+  </a>-->
 </div>
 
 <style>
   .hero {
-    background-image:
-      linear-gradient(hsl(165 44% 5% / .6) , hsl(165 44% 5% / .4) , hsl(165 44% 5%)),
-      url("/heroo.avif");
-    background-size: cover;
-    background-position: center;
+    position: relative; /* agrega esto */
+    min-height: 100svh; /* mejor para móviles */
     height: 100vh;
+    background-image:
+      linear-gradient(to top, #00000086, #0000007a), url(/junt.avif);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
     text-align: center;
-    padding: 10px;
   }
 
-  img {
+  /* img {
     width: 140px;
     margin-top: 30px;
-  }
+  } */
 
   .hero b {
     display: block;
@@ -44,15 +51,23 @@ import Welcome from "../components/Menu.astro";
   }
 
   h2 {
-    font-size: clamp(1.9rem, 4.5vw, 5rem);
+    font-size: clamp(1.9rem, 4.5vw, 4.5rem);
     margin-top: 10px;
     font-family: var(--font-Principal);
     font-weight: 300;
     color: white;
     line-height: 1.25;
-
     margin: 10px auto;
     max-width: 48rem;
+  }
+  .conj {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+
+    text-align: center;
+    padding: 0 1rem;
   }
 
   h2 span {
@@ -72,26 +87,23 @@ import Welcome from "../components/Menu.astro";
     line-height: 1.5rem;
   }
 
-  button {
+  /* button {
     margin-top: 20px;
-    background:#ffffff00;
+    background: #ffffff00;
     border: 1px solid #ffffff7b;
     color: white;
-    
+
     padding: 10px 30px;
-    font-size:var(--text-small);
+    font-size: var(--text-small);
     font-weight: 400;
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-  }
- 
+  } */
 
   @media (max-width: 768px) {
-     .hero b {
-    
-    font-size: .9rem;
-   
-  }
+    .hero b {
+      font-size: 0.9rem;
+    }
   }
 </style>
