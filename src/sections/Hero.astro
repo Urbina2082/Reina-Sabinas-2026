@@ -4,7 +4,8 @@ import Welcome from "../components/Menu.astro";
 
 <div class="hero">
   <Welcome />
-  <!-- <img data-aos="fade-down" src="/logo.avif" alt="Hero Image" /> -->
+  <img data-aos="fade-down" src="/logo.avif" alt="Hero Image" />
+
   <!-- <b data-aos="fade-down">Certamen de Belleza · Sabinas, Coahuila</b>
   <h2 data-aos="fade-down">BELLEZA, ELEGANCIA Y ORGULLO QUE REPRESENTAN A <span>SABINAS</span></h2>
   <p data-aos="fade-down">
@@ -16,11 +17,10 @@ import Welcome from "../components/Menu.astro";
     <h2>
       BELLEZA, ELEGANCIA Y ORGULLO QUE REPRESENTAN A <span>SABINAS</span>
     </h2>
+    <!-- <a href="#Candidatas">
+    <button data-aos="fade-down"> CONOCER CANDIDATAS </button>
+  </a> -->
   </div>
-
-  <!--  <a href="#Candidatas">
-    <button data-aos="fade-down"> CONOCER CANDIDATAS </button> 
-  </a>-->
 </div>
 
 <style>
@@ -34,12 +34,14 @@ import Welcome from "../components/Menu.astro";
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
+    padding: 2rem 0rem 0rem;
   }
 
-  /* img {
-    width: 140px;
-    margin-top: 30px;
-  } */
+  img {
+    width: 160px;
+    margin-top: 20px;
+    display: none;
+  }
 
   .hero b {
     display: block;
@@ -62,10 +64,9 @@ import Welcome from "../components/Menu.astro";
   }
   .conj {
     position: absolute;
-    bottom: 10px;
+    bottom: 30px;
     left: 0;
     right: 0;
-
     text-align: center;
     padding: 0 1rem;
   }
@@ -87,7 +88,7 @@ import Welcome from "../components/Menu.astro";
     line-height: 1.5rem;
   }
 
-  /* button {
+  button {
     margin-top: 20px;
     background: #ffffff00;
     border: 1px solid #ffffff7b;
@@ -99,11 +100,32 @@ import Welcome from "../components/Menu.astro";
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-  } */
+  }
 
   @media (max-width: 768px) {
     .hero b {
       font-size: 0.9rem;
+    }
+
+    .hero {
+      background-image:
+        linear-gradient(to top, #00000086, #0000007a), url(/fer.avif);
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      width: 140px;
+      margin-top: 20px;
+    }
+
+    .conj {
+      position: relative;
+      bottom: 00px;
+    }
+
+    h2 {
+      display: none;
     }
   }
 </style>

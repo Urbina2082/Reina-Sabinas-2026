@@ -10,6 +10,7 @@ import Video from "../sections/Video.astro";
 import Counter from "../sections/Timer.astro";
 import NuestraRE from "../sections/NuestraRE.astro";
 import Votaciones from "../sections/Votaciones.astro";
+import Patrocinadores from "../sections/Patrocinadores.astro";
 ---
 
 <Layout>
@@ -21,6 +22,8 @@ import Votaciones from "../sections/Votaciones.astro";
  
   <Reinas client:load />
   <!-- <Votaciones loading="lazy" /> -->
+   <Patrocinadores/>
+
   <Counter loading="lazy" />
   <Footer loading="lazy" />
 </Layout>

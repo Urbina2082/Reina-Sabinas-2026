@@ -1,5 +1,5 @@
 ---
-const { img, nombre, edad, frase, insta, repre } = Astro.props;
+const { img, nombre, edad, frase, insta, repre ,color} = Astro.props;
 ---
 
 <div
@@ -15,6 +15,7 @@ const { img, nombre, edad, frase, insta, repre } = Astro.props;
     <span>{edad}</span>
     <p>{repre}</p>
     <p>{frase}</p>
+    <p>{color}</p>
     <a href=`https://www.instagram.com/${insta}`
       ><button>
         <svg
